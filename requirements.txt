@@ -1,0 +1,7 @@
+pytube
+opencv-python
+python-dotenv
+opencv-contrib-python
+openai-whisper
+uvicorn[standard]
+fastapi
