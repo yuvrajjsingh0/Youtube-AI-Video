@@ -1,101 +1,20 @@
-# Reelsfy - Reels Clips Automator
+## Inspiration
+The inspiration behind Reelify came from the desire to streamline and automate the process of creating engaging video content, particularly for social media platforms like Instagram. We noticed a gap in the market for a tool that could efficiently transform any input video into captivating reels, saving time and effort for content creators.
 
-Introducing Isabella Reels, the intelligent core behind Reelsfy. Inspired by the popularity of Instagram Reels, Isabella is here to transform the way you create content. She's the sister bot to Marcelo Resenha, known for assisting with YouTube video editing. With Isabella's capabilities, you can now effortlessly turn longer videos into engaging Instagram Reels.
+## What it does
+Reelify is an automated reels creation app. It takes any input video and converts it into a reel by utilizing Gemini to identify the most viral parts of the video. We then employ openCV and ffmpeg to add dynamic effects while preserving the subject's integrity in the video.
 
-Reelsfy is an advanced, AI-powered tool that automates the process of creating Instagram Reels from longer videos. Isabella uses a combination of computer vision to track faces, the GPT model to identify the most engaging parts of the video, and the Whisper ASR system to generate subtitles. This open-source project is perfect for content creators looking to streamline their workflow and optimize content for virality.
+## How we built it
+We built Reelify by integrating cutting-edge technologies. We leveraged Gemini's AI capabilities to pinpoint the most engaging segments of the video. Then, we utilized openCV and ffmpeg to seamlessly incorporate visual effects into the reel. For the frontend, we opted for no-code tools like Webflow, which expedited the development process, allowing us to focus on the backend intricacies.
 
-## Features
+## Challenges we ran into
+One of the major challenges we encountered was the deployment process. Ensuring smooth deployment and integration of various components proved to be more complex than anticipated. Additionally, fine-tuning the algorithms to accurately identify viral segments required extensive testing and optimization.
 
-- Converts horizontal videos into vertical Reels, perfect for Instagram
-- Downloads videos directly from YouTube or uses local video files
-- Uses GPT models to identify and cut the most viral sections of the video
-- Employs computer vision to track faces during the video editing process
-- Generates captions using the Whisper ASR system
-- Uses GPU for faster processing (optional)
+## Accomplishments that we're proud of
+We're particularly proud of successfully automating one of the most crucial aspects of content creation using Gemini. By automating the identification of viral segments, we've significantly reduced the manual effort required to produce compelling reels. This achievement represents a significant milestone in our journey towards simplifying content creation.
 
-## Prerequisites
+## What we learned
+Throughout the development of Reelify, we gained valuable insights into the capabilities of AI technologies like Gemini and the intricacies of video processing with openCV and ffmpeg. Additionally, we honed our deployment skills and learned to navigate challenges effectively in a dynamic development environment.
 
-- Anaconda >= 22.11.1
-- Python >= 3.11
-- FFMPEG >= 4.4.2
-- OpenAI API Key
-- A GPU is optional but recommended for faster processing
-- Developed on Ubuntu 22.04
-
-
-## Installation
-
-1. Clone the git repository:
-
-```
-$ git clone https://github.com/eddieoz/reels-clips-automator.git
-```
-
-2. Create and activate a new conda environment:
-
-```
-$ conda create -n reels-clips-automator
-$ conda activate reels-clips-automator
-```
-
-3. Navigate to the cloned repository's folder:
-
-```
-$ cd folder
-```
-
-4. Install the required dependencies:
-
-```
-$ python -m pip install -r requirements.txt
-$ python -m pip install utils/auto-subtitle
-```
-
-5. Create a `.env` file in the root directory of the project and include your OpenAI API Key:
-
-```
-OPENAI_API_KEY='Your-OpenAI-API-key-here'
-```
-
-## Usage
-
-To see the help:
-
-```
-$ python reelsfy.py --help
-```
-
-For a video from YouTube:
-
-```
-$ python reelsfy.py -v <youtube video url>
-```
-
-For a local file:
-
-```
-$ python reelsfy.py -f <video file>
-```
-
-Please note that videos should be approximately 20 minutes long due to the total token limit of the gpt-3.5-turbo-16k model.
-
-## Support
-
-For any queries or support, feel free to reach out:
-
-- Twitter: @eddieoz
-- YouTube: @eddieoz
-- Zaps to Nostr: eddieoz@sats4.life
-- Sats to eddieoz@zbd.gg
-
-## Contributions
-
-Contributions to the project are welcome! Feel free to check out the code and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Acknowledgements
-
-This project was inspired by the work of [NisaarAgharia's AI-Shorts-Creator](https://github.com/NisaarAgharia/AI-Shorts-Creator).
+## What's next for Reelify - Automating Content Creation
+Looking ahead, we aim to further harness Gemini's potential to enhance Reelify's functionality. We plan to utilize Gemini to identify potential visual effects that can be applied at different durations within the video. Additionally, we intend to explore its capabilities in analyzing keywords that complement the video content, optimizing engagement and reach on social media platforms.
